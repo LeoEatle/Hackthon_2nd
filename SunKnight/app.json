@@ -1,0 +1,16 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/running/running",
+    "pages/ranking/ranking",
+    "pages/planning/planning",
+    "pages/me/me",
+    "pages/finish/finish"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "要你跑步",
+    "navigationBarTextStyle":"black"
+  }
+}

@@ -1,0 +1,98 @@
+<!--index.wxml-->
+<view class="content">
+  <view class="chooseButtons">
+    <text id="{{runHidden? 'buttoninActive': 'buttonActive'}}"  size = "default" bindtap="tapRunning">跑步</text>
+    <text id="{{planHidden? 'buttoninActive': 'buttonActive'}}"  bindtap="tapPlanning">训练计划</text>
+  </view>
+  
+  
+
+  <view class="startContent" wx:if="{{!runHidden}}">
+    <view  bindtap="bindViewTap" class="mapContent">
+      <map longitude="{{location.longitude}}" latitude="{{location.latitude}}" markers="{{markers}}"  style="width: 414px; height: 600px;"></map>  
+    </view>
+    <image class="start" src= "../imgs/startRunning.png" bindtap="startRunning"></image>
+    <view class="toolBar">
+      <view class="item">
+        <image src="../imgs/sportActive.png" bindtap="enterSport"></image>
+      </view>
+      <view class="item">
+        <image src="../imgs/ranking.png" bindtap="enterRanking"></image>
+      </view>
+      <view class="item">
+        <image src="../imgs/me.png" bindtap="enterMe"></image>
+      </view>
+    </view>
+  </view>
+  <!--判断按钮是选择跑步还是计划来条件显示startContent的内容-->
+  <view class="startContent" wx:if="{{!planHidden && !ifPlanned}}">
+    <view style="font-size: 18px; line-height: 22px;" class="information">
+      您需要存入一定的<text style="display: inline; font-size: 18px;color: #19ad1b">激励金</text>来帮助您完成任务
+      若按时完成则返回给您，并且获得<text style="display: inline; font-size: 18px;color: gold">勋章</text>
+      若未完成则将您存入金额捐入腾讯爱心公益
+      <label style="display: block; margin-top: 20px">
+          <checkbox value="false" />
+          同意并接受《腾讯公益网用户协议》
+      </label>
+    </view>
+    <view style="margin-top: 74px;">
+      <text style="font-size: 22px; font-weight: 800">接受挑战吗？</text>
+    </view>
+    <image class="start"  src= "../imgs/planStart.png" bindtap="startPlanning"></image>
+    <view style="margin-top: 254px;font-size: 18px; font-weight: 800;color: #9B9B9B;">
+      23人接受挑战
+    </view>
+    <scroll-view scroll-x="true"  >
+      <view style="margin-top: 30px; width: 42px; height: 42px; display: block; float: left; margin-left: 30px" wx:for="{{urls}}">
+        <image style="width: 42px; height: 42px; " src="{{item}}"></image>
+      </view>
+    </scroll-view>
+  </view>
+
+  <view class="startContent" wx:if="{{!planHidden && ifPlanned}}">
+    <view style="height: 147px">
+      <view style="height: 25px;  padding: 0 10px;">
+        <text style="float: left;font-size: 18px;font-weight: 500;">今日目标</text>
+        <text style="float: right;font-size: 18px;font-weight: 500;">历史计划</text>
+      </view>
+      <view style="height: 122px">
+        <text style="position: absolute; left: 0px; font-size: 104px; font-weight: 800;top: 80px;">{{planDistance}}</text>
+        <text style="position: absolute; left: 240px; top: 130px ">公里</text>
+      </view> 
+    </view>
+    <map longitude="{{location.longitude}}" latitude="{{location.latitude}}" markers="{{markers}}"  style="width: 414px; height: 450px; margin-top: 30px;"></map>
+    <image class="start" style="margin: 0 auto;" src= "../imgs/startRunning.png" bindtap="startRunning"></image>
+    <!--结算页面-->
+    <!--<view class="finishContent" hidden="{{!ifFinished}}">
+      <view>
+        <image src="../imgs/finish/1.png"></image>
+        <text>{{finishDistance}}km</text>
+        <text>距离</text>
+      </view>
+      <view>
+        <image src="../imgs/finish/1.png"></image>
+        <text>{{finishTime}}</text>
+        <text>时间</text>
+      </view>
+      <view>
+        <image src="../imgs/finish/1.png"></image>
+        <text>{{finishCalorie}}</text>
+        <text>卡路里</text>
+      </view>
+    <view>
+      
+      </view>-->
+    
+    <view class="toolBar">
+      <view class="item">
+        <image src="../imgs/sportActive.png" bindtap="enterSport"></image>
+      </view>
+      <view class="item">
+        <image src="../imgs/ranking.png" bindtap="enterRanking"></image>
+      </view>
+      <view class="item">
+        <image src="../imgs/me.png" bindtap="enterMe"></image>
+      </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,43 @@
+<view class="content">
+    <view class="section">
+        <view class="section__title">选择计划</view>
+        <picker bindchange="bindPickerChange" value="{{index}}" range="{{array}}">
+            <view class="picker">
+                {{array[index]}}
+            </view>
+        </picker>
+    </view>
+
+    <view class="section white">
+        <view class="section_title" style="padding: 5px; border-left: 2px solid #19ad1b; margin-left: 5px ;color: #9b9b9b ">
+            <text>计划时长</text>
+            <text style="float: right; font-size: 14px; ">详细计划</text>
+        </view>
+        <view style="font-size: 14px; color: #595656; padding: 5px;">
+            <text>2016-10-01 - 2016-11-14</text>
+            <text style="float: right">6周 42天 62公里</text>
+        </view>
+        <image style="width: 380px; height: 162px" src="{{selectedUrl}}">
+        </image>
+    </view>
+
+    <view class="section">
+        <view class="section_title">存入激励金</view>
+    </view>
+
+    <view class="section white">
+        <view class="section_title" style="padding: 5px; border-left: 2px solid #19ad1b; margin-left: 5px ;color: #9b9b9b ">
+            <text>请选择金额</text>
+            <text style="float: right; font-size: 14px; color: #9b9b9b ">有疑问？</text>
+        </view>
+        <view style="display: inline-block; margin-top: 10px" class="money" wx:for="{{moneys}}" bindtap="bindMoneyTap">
+            <image id="{{index}}" style=" width: 82px; height: 40px; margin: 0 5px; " src="{{item}}" ></image>
+        </view>
+        <view style="padding: 5px; margin-top: 10px;font-size: 14px; color: #9b9b9b">如果您未按时完成该计划，系统将会自动把<text style="color: #19ad1b ">激励金</text>捐献给腾讯公益机构</view>
+
+    </view>
+
+    <button style="margin-top: 100px;width: 70%; height: 40px; " type="primary">确认金额</button>
+        
+    
+</view>

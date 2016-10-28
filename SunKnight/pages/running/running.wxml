@@ -1,0 +1,26 @@
+
+
+<view class="content">
+    <view class="showDistance">
+        <text>{{distance}}</text>
+        <text id="description">公里</text>
+    </view>
+    <view class="timeAndSpeed">
+        <view class="time">
+            <text>{{time}}</text>
+            <text id="description">时长</text>
+        </view>
+        <view class="speed">
+            <text>{{speed}}</text>
+            <text id="description">速率</text>
+        </view>
+    </view>
+    <view class="pauseAndStop">
+        <image wx:if="{{!startHidden}}"  src="../imgs/startRunning.png" id="start" bindtap="startRunning"></image>
+        <image wx:if="{{!pauseHidden}}" src="../imgs/pause.png" id="pause" bindtap="pauseRunning"></image>
+        <image wx:if="{{!continueHidden}}" src="../imgs/Continue.png" id="continue" bindtap="continueRunning"></image>
+
+        <image src="../imgs/Finish.png" id="finish" bindtap="finishRunning"></image>
+    </view>
+
+</view>

@@ -1,0 +1,35 @@
+<view class="content">
+    <view class="information">
+        <image src="{{avatorUrl}}" style="width: 123px; height: 123px; float: left; border-radius: 50% ; margin-right: 20px;" class="avator">
+        
+        </image>
+        <view style="float: left; font-size: 24px; font-weight: 800" class="others">
+            <text style="margin: 5px" class="description">{{nickName}}</text>
+            <view style="margin: 5px"  class="medal">
+                <image src="../imgs/medal1.png" style="width: 36px; height: 36px; display: inline-block"></image>
+                <image src="../imgs/medal2.png" style="width: 36px; height: 36px; display: inline-block"></image>
+
+            </view>
+            <text style="margin: 5px"  class="totalDistance">{{totalDistance}}公里</text>
+        </view>    
+    </view>
+
+    <view class="menu">
+        <view>我的计划</view>
+        <view>我的激励金</view>
+        <view>我的奖章</view>
+        <view>设置</view>
+    </view>
+
+     <view class="toolBar">
+      <view class="item">
+        <image src="../imgs/sportActive.png" bindtap="enterSport"></image>
+      </view>
+      <view class="item">
+        <image src="../imgs/ranking.png" bindtap="enterRanking"></image>
+      </view>
+      <view class="item">
+        <image src="../imgs/me.png" bindtap="enterMe"></image>
+      </view>
+    </view>
+</view>

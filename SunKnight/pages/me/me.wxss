@@ -1,0 +1,49 @@
+.content{
+  display: block;
+  background-color: #F4F5F7;
+  height: 630px;
+  font-size: 18px;
+  font-weight: 800;
+}
+
+.information{
+    background-color: #fff;
+    height: 168px;
+    padding: 10px;
+    padding-top: 50px;
+
+}
+.menu{
+    background-color: #fff;
+    height: 200px;
+    margin-top: 5px;
+}
+.menu view{
+    height: 30px;
+    border-bottom: 1px solid #F4F5F7;
+    font-size: 18px;
+    font-weight: 800;
+    line-height: 30px;
+    padding: 10px;
+}
+/*toolBar区域*/
+.toolBar{
+  position: absolute;
+  display: block;
+  width: 100%;
+  bottom: 0px;
+  padding: 0, 0.53rem;
+  height: 56px;
+}
+
+.item{
+  display: inline-block;
+  width: 30%;
+  padding-top: 0.9rem;
+  text-align: center;
+}
+
+.item image{
+  width: 30px;
+  height: 30px;
+}

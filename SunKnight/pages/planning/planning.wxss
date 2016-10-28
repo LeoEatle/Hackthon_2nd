@@ -1,0 +1,27 @@
+.content{
+  display: block;
+  background-color: #F4F5F7;
+  height: 630px;
+  font-size: 18px;
+  font-weight: 800;
+
+}
+
+.section__title {
+    padding: 5px;
+    background-color: #F4F5F7;
+}
+
+.picker {
+    padding: 5px;
+    height: 30px;
+    color: #9b9b9b;
+    background-color: #fff;
+    line-height: 30px;
+}
+
+.white{
+  background-color: white;
+  margin-top: 10px;
+}
+

@@ -1,0 +1,59 @@
+<view class="content">
+    <view class="startContent" >
+    <view style="height: 147px">
+      <view style="height: 25px;  padding: 0 10px;">
+        <text style="float: left;font-size: 18px;font-weight: 500;">今日目标</text>
+        <text style="float: right;font-size: 18px;font-weight: 500;">历史计划</text>
+      </view>
+      <view style="height: 122px">
+        <text style="position: absolute; left: 0px; font-size: 104px; font-weight: 800;">{{planDistance}}</text>
+        <text style="position: absolute; left: 200px; top: 120px ">公里</text>
+      </view>
+      
+    </view>
+    <map longitude="{{location.longitude}}" latitude="{{location.latitude}}" markers="{{markers}}"  style="width: 414px; height: 315px;"></map>
+    <image class="start" style="margin: 0 auto;" src= "../imgs/startRunning.png" bindtap="startRunning"></image>
+    <!--结算页面-->
+    <view class="finishContent" >
+      <view>
+        <image src="../imgs/finish/3.png"></image>
+        <text>{{finishDistance}}</text>
+        <text>距离</text>
+      </view>
+      <view>
+        <image src="../imgs/finish/1.png"></image>
+        <text>{{finishTime}}</text>
+        <text>时间</text>
+      </view>
+      <view>
+        <image src="../imgs/finish/2.png"></image>
+        <text>{{finishCalorie}}</text>
+        <text>卡路里</text>
+      </view>
+    <view>
+      
+      </view>
+    </view>
+    <view class="toolBar">
+      <view class="item">
+        <image src="../imgs/sportActive.png" bindtap="enterSport"></image>
+      </view>
+      <view class="item">
+        <image src="../imgs/ranking.png" bindtap="enterRanking"></image>
+      </view>
+      <view class="item">
+        <image src="../imgs/me.png" bindtap="enterMe"></image>
+      </view>
+    </view>
+  </view>
+
+  <!--弹窗-->
+  <modal title="" style="text-align: center" confirm-text="确认" cancel-text="分享朋友圈" hidden="{{modalHidden}}" bindconfirm="modalChange" bindcancel="modalChange">
+    <view style="text-align: center">    
+        <icon style="display: inline-block" type="success" size="40"/>
+    </view>    
+    <text style="width: 100%; text-align: center; padding: 0 70px">恭喜你完成今日内容</text>
+    
+  </modal>
+
+</view>
